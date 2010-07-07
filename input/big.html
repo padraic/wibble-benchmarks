@@ -1,0 +1,691 @@
+<div id="lightbox_white">
+
+            <p>
+                DevZone uses zend.com accounts.  If you already have a zend.com account
+                you may dismiss this message and log in directly.  
+            </p><p>
+                If you don't already
+                have a zend.com account, then please continue on to register for an
+                account at zend.com.  After you are done you will be redirected back
+                to DevZone to login.
+            </p>
+            <a href="http://www.zend.com/user/register?redirect=/member/login&sub=devzone"><button>
+                Continue Registration
+            </button></a>
+            &nbsp; &nbsp;
+            <button onClick="return hideLightbox();">Dismiss</button> 
+        </div>
+
+        <div id="lightbox_black"></div>
+        <div id="container">
+            <div id="header">
+                <div id="logo">
+                    <a href="http://devzone.zend.com/"><span>Zend Developer Zone - Advancing the art of PHP</span></a>
+                </div>
+                <div id="logincontainer">
+                    <div id ="account">
+
+                        <ul>
+                                                <li><a href="/member/login?redirect=http://devzone.zend.com/article/8855" title="Login" id="loginlink">Login</a>&nbsp;|&nbsp;</li>
+                        <li><a href="http://www.zend.com/user/register?redirect=/member/login&sub=devzone" title="Create new account and profile" onclick="return showLightbox();">Register</a>&nbsp;|&nbsp;
+                        </li>
+                                                <li><a href="http://devzone.zend.com/contribute" title="Contribute content">Contribute</a></li>
+                    </ul>
+
+                    </div>
+
+                    <div id="loginheader">
+                        <form name="headerloginform" method="POST" action=""><ul>
+                        <li><label class="login-label">Username: </label><input type="text" size="8" class="login-text" name="username" /></li>
+                        <li><label class="login-label">Password: </label><input type="password" size="8" class="login-text" name="userpass"/></li>
+                        <input type="hidden" name="redirect" value="http://devzone.zend.com/article/8855">
+                        <li><input type="submit" class="login-button" value="Login" name="submit"></li>
+
+                        <li><input type="button" class="login-button" value="Cancel" onclick="divSwap('account','logincontainer');"></li>
+                        </ul></form>
+                    </div>
+                    <div id="login-pleasewait">
+                        <p> Processing login. Please wait...
+                    </div>
+                </div>
+            </div>
+            <div id="middle">
+
+                <div id="nav">
+                    <ul>
+                        <li><a href="http://devzone.zend.com/">Home</a></li>
+                        <li><a href="http://devzone.zend.com/articles">Articles</a></li>
+                        <li><a href="http://devzone.zend.com/tutorials">Tutorials</a></li>
+                        <li><a href="http://devzone.zend.com/podcasts">Podcasts</a></li>
+                        <li><a href="http://devzone.zend.com/news">News</a></li>
+
+                        <li><a href="http://devzone.zend.com/events">Events</a></li>
+                        <li><a href="http://forums.zend.com/">Forums</a></li>
+                        <li><a href="http://php.net/docs.php">PHP Manual</a></li>
+                    </ul>
+                    <div class="feed-icon"><a href="http://feeds.feedburner.com/ZendDeveloperZone" title="Zend Developer Zone - Home Page RSS Feed" rel="alternate" type="application/rss+xml" ><img src="/images/feed-icon-28x28.png" /></a></div>
+                    <div id="search">
+                    <form name="search.form" action="http://devzone.zend.com/search/entry" method="post" id="search_form">
+
+                      <div>
+                        <input name="search_from_url" type="hidden" value="http://devzone.zend.com/article/8855" />
+                        <input name="search_text" type="text" maxlength="80" id="search_text" class="input-text" />
+                        <input type="image" src="/images/btn_search.gif" alt="Search" value="Go" id="search_submit" class="input-button" />
+                      </div>
+                    </form>                    
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                
+                                <div id="col-left">
+                    
+                    					<div id="popular-tags" >
+	                   <div class="tabbed" id="tabbed"></div><div id="tagswrapper">
+                       <div class="tags" id="tags"><BR><BR></div></div>
+                    </div>                    <br />
+                    
+                            <div id="right_sidebar_other" class="sidebar_outer">
+          <div align="center" class="sidebar_inner" style="background: white" >
+            <a href="http://www.zend.com/devzone_offer">
+
+                <img src="http://www.zend.com/r/devzone/offer.jpg"  border="0" />
+            </a>
+          </div>
+        </div><br />
+                    
+                    					<div id="quick-links">
+						<h2 class="gray-heading"><span>Quick Links</span></h2>
+						<ul class="first-level">
+    						    						      						      <li class="first" >
+
+    						      <a href="http://www.php.net/downloads" target="_blank">Get PHP!</a></li>
+    						      						      <li>
+    						      <a href="http://www.zend.com" target="_blank">Zend Home Page</a></li>
+    						      						      <li>
+    						      <a href="http://framework.zend.com/" target="_blank">Zend Framework</a></li>
+    						      						      <li>
+    						      <a href="http://www.zend.com/community/zend-server-ce" target="_blank">Zend Server CE</a></li>
+
+    						      						      <li>
+    						      <a href="http://www.zend.com/en/products/server/" target="_blank">Zend Server</a></li>
+    						      						      <li>
+    						      <a href="http://www.zend.com/en/products/studio/" target="_blank">Zend Studio</a></li>
+    						      						      <li>
+    						      <a href="http://www.zend.com/products/zend_guard" target="_blank">Zend Guard </a></li>
+    						      						      <li>
+
+    						      <a href="http://www.phparch.com" target="_blank">php|architect</a></li>
+    						      						      <li class="last" >
+    						      <a href="http://phppodcasts.com" target="_blank">PHP Podcasts</a></li>
+    						      												</ul>
+						<div class="bottom"></div>
+					</div>                    <br clear="all" />
+                    <div>
+
+                    
+                    		<div class="extfeeds" class="section-box">
+		    <div id="extfeed-phpdeveloper" class="extfeed">
+				<div class="loading">Loading feed</div>
+		    </div>
+			<div id="extfeed-dzonephp" class="extfeed">
+				<div class="loading">Loading feed</div>
+			</div>
+			<div id="extfeed-phpwomen" class="extfeed">
+
+				<div class="loading">Loading feed</div>
+			</div>
+		</div>                    </div>
+                </div>                
+                        
+                
+               <div id="content" class="article-page" >
+              
+              
+                           <div class="tagbar">
+                              <img class="icon" src="/images/article.png"
+                  alt="Original DevZone Content"
+                  title="Original DevZone Content" />
+                          <div class="tags">
+
+                                     &nbsp;<a href="/tag/Advanced">Advanced</a>&nbsp;
+                                     &nbsp;<a href="/tag/PHP5">PHP5</a>&nbsp;
+                                     &nbsp;<a href="/tag/Tutorials">Tutorials</a>&nbsp;
+                                     &nbsp;<a href="/tag/XML">XML</a>&nbsp;
+                                     &nbsp;<a href="/tag/Zend%20Framework">Zend Framework</a>&nbsp;
+                              </div>
+
+         </div>
+                  <div class="info-container">
+                          <a href="http://devzone.zend.com/member/7915-Alexander-Veremyev" 
+                title="Author Profile"><img src="http://www.gravatar.com/avatar/7f4c34aa043391933c3dccb851041edd?s=30&r=g&d=identicon" alt="" /></a>
+                      <div class="info-inner">
+         <h1 id="page-heading">PHP DOM XML extension encoding processing</h1>
+       <div class="article-info">
+           <span class="article-by"><a
+                href="http://devzone.zend.com/member/7915-Alexander-Veremyev" 
+                title="Author profile and contributions">             Alexander Veremyev</a></span>
+
+           <span class="comment-block"> |
+             <a href="#comments" title="Jump to comments">             3 comments             </a> | Tuesday, September 1, 2009 
+           </span>
+                      </div>
+          </div>
+         </div>
+        <div class="clearfix"></div><br />
+
+        <div class="article-body">
+          <p>
+    I recently worked with PHP's DOM XML extension while working on <a
+        href="http://framework.zend.com/">Zend Framework's</a>
+    Zend_Search_Lucene HTML highlighting capabilities, and uncovered some
+    undocumented features and issues with the extension in regards to character
+    encoding. The information contained in this article should also apply to
+    other libxml-based DOM implementations, as PHP's DOM extension simply wraps
+    that library.
+</p>
+
+<h2>1. Internal document encoding is always UTF-8</h2>
+
+<p>
+    The <code>DOMDocument::$encoding</code> property doesn't affect anything
+    except the dump operations - e.g., <code>DOMDocument::saveXML()</code>.
+
+</p>
+
+<p>
+    You can set in the constructor:
+</p>
+
+<pre><code>
+$dom = new DOMDocument('1.0', 'Windows-1251');
+</code></pre>
+
+<p>or set it later:</p>
+
+<pre><code>
+$dom = new DOMDocument('1.0');
+$dom-&gt;encoding = 'Windows-1251';
+
+</code></pre>
+
+<p>
+    but the internal document representation encoding is <em>always UTF-8</em>.
+</p>
+
+
+<h2>2. Input data is always treated as UTF-8</h2>
+
+<p>The following methods for adding textual content to a document:</p>
+
+<ul>
+
+    <li><code>DOMDocument::createTextNode()</code></li>
+    <li><code>DOMDocument::createComment()</code></li>
+    <li><code>DOMDocument::createCDATASection()</code></li>
+    <li><code>DOMDocumentFragment::appendXML()</code></li>
+</ul>
+
+<p>always treat input data as UTF-8 strings.</p>
+
+<p>
+    Moreover, it can be tested by passing an incorrect UTF-8 string as an input
+    of <code>DOMDocumentFragment::appendXML()</code>. It issues the warning:
+</p>
+
+<pre>
+DOMDocumentFragment::appendXML(): Entity: line 1: parser error : Input is
+not proper UTF-8, indicate encoding !
+</pre>
+    
+<p>
+    without regard for the encoding property value. (It's necessary to note that
+    we can't "indicate encoding" for appendXML() input since it is an XML
+    fragment, not a full XML document).
+</p>
+
+<p>
+
+    The other methods mentioned above process input data "as is" without any
+    transformation and don't throw warnings. Problems will come later, however,
+    when you try to dump the document to a string:
+</p>
+
+<pre>
+"Warning: DOMDocument::saveXML(): output conversion failed due to conv
+error, ..."
+</pre>
+
+<h2>3. Text nodes and CDATA are stored as UTF-8 without transformations</h2>
+
+<p>
+    The <code>DOMNode::$nodeValue</code>, <code>DOMText::$wholeText</code>,
+    <code>DOMCharacterData::$data</code>, and <code>DOMComment::$data</code>
+
+    properties also store data without any transformations, i.e. in UTF-8.
+</p>
+
+<p>
+    The only exception is the case when we add non-UTF-8 data manually. It
+    creates an incorrect DOM tree and, as mentioned above, we will have
+    problems with serializing the document ("output conversion failed" error).
+</p>
+
+<p>
+     The <code>DOMXPath</code> class also always works in UTF-8 mode. It's
+     concerned with XPath expressions as well as with retrieved nodesets.
+</p>
+
+<p>
+    Both <code>DOMNode::$nodeValue</code> and (as it will be mentioned below)
+    the result of the <code>DOMDocument::saveXML()</code> method used in XML
+    subtree dump mode are in UTF-8.
+</p>
+
+<h2>4: Document encoding does not affect loading behavior</h2>
+
+<p>
+    The encoding property (<code>DOMDocument::$encoding</code>) value also
+    doesn't affect <code>DOMDocument::loadXML()</code> or
+    <code>DOMDocument::loadHTML()</code>.
+
+</p>
+
+<p>
+    The only way to declare the document encoding we want to parse is to declare
+    it explicitly in the document header.
+</p>
+
+<p>For XML, this should look familiar:</p>
+
+<pre>
+&lt;?xml version="1.0" encoding="Windows-1251"?&gt;
+</pre>
+
+<p>
+    For HTML, you need to declare a charset in a Content-Type meta http-equiv
+    tag:
+
+</p>
+
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=Windows-1251"&gt;
+</pre>
+
+<p>
+    Note: the <code>DOMDocument</code> encoding attribute is overloaded while
+    parsing with the corresponding document header value. 
+
+</p>
+
+<p>
+    If encoding is not declared in the XML/HTML header, the input string is
+    parsed as 
+</p>
+
+<ul>
+    <li>a UTF-8 string by <code>loadXML()</code>;</li>
+    <li>an ISO-8859-1 string by <code>loadHTML()</code> (!!!!) corresponding to the HTTP 1.1 standard (RFC2068, section 3.7.1);</li>
+
+    <li>and <code>DOMDocument::$encoding</code> is set to null.</li>
+</ul>
+
+<p>
+    Clearly, problems of correct document encoding transformation are more
+    difficult to be solved for HTML parsing than XML, as the latter has a more
+    formal specification and stricter rules, XML encoding is declared in the
+    opening tag, and the default encoding is UTF-8, which covers the whole
+    Unicode range. So the rest of the article will mostly touch on HTML parsing
+    problems.
+</p>
+
+<h3>Encoding issues with HTML parsing</h3>
+
+<p>
+
+    Unfortunately, <code>loadHTML()</code> doesn't always correctly recognize
+    the defined Content-type HTTP-EQUIV meta tag.
+</p>
+
+<p>The following things act as blockers:</p>
+
+<ul>
+    <li>Any non-ASCII symbol occurring before the Content-type HTTP-EQUIV meta tag;</li>
+    <li>Any invalid (from an encoding point of view) symbol occurring in the document. E.g. Content-type meta tag declares 'charset=UTF-8', but the actual HTML markup contains non-valid UTF-8 sequences.</li>
+
+</ul>
+
+<p>
+    The second extremely upsetting thing is that it's impossible to recognize if
+    encoding recognition and transformation failed during HTML parsing. In both
+    cases mentioned above, the input will be processed as an ISO-8859-1 string
+    and converted to UTF-8 (using ISO-8859-1 =&gt; UTF-8 conversion) while
+    creating the DOM tree, but the <code>DOMDocument::$encoding</code> property
+    will be "correctly" set to the Content-type tag contents, e.g. Windows-1251.
+</p>
+
+<p>
+    As a result, we can't recognize if the encoding of the parsed HTML has been
+    lost.
+</p>
+
+<p>
+    The easiest solution would appear to be to utilize <code>loadXML()</code> to
+    parse the HTML document, as this would enforce encoding more properly.
+    However, this will often fail to parse the document at all in places where
+    <code>loadHTML()</code> will be lenient: existence of unpaired tags, HTML
+    entity support, etc. This, unfortunately, means that a large class of
+    correct HTML documents can't be loaded as <code>DOMDocument</code> objects,
+    simply because you must rely on <code>loadHTML</code>.
+</p>
+
+<p>That said, it's possible to use the following workaround:</p>
+
+<ol>
+    <li>Insert an additional &lt;head&gt; section with the appropriate Content-type HTTP-EQUIV meta tag immediately following the opening &lt;html&gt; tag.</li>
+    <li>Optionally convert data to the specified encoding (UTF-8 is the best candidate) using iconv() with the '//IGNORE' postfix added to the target encoding name.</li>
+    <li>
+        Remove the supplementary &lt;head&gt; section following document
+        parsing:
+    </li>
+
+</ol>
+
+<pre><code>
+$dom       = DOMDocument::loadHTML($htmlString);
+$xpath     = new DOMXPath($dom);
+$dummyHead = $xpath-&gt;query('/html/head')-&gt;item(0);
+$dummyHead-&gt;parentNode-&gt;removeChild($dummyHead);
+</code></pre>
+
+<p>The above approach has the following limitations:</p>
+
+<ul>
+    <li>The HTML markup must not contain binary data.</li>
+
+    <li>The page must not contain non-ASCII symbols before the opening &lt;html&gt; tag (there may be page comments).</li>
+    <li>It requires manual recognition of the input type: a complete HTML page or an HTML fragment (HTML fragment has to be wrapped with &lt;html&gt;&lt;head&gt;...&lt;/head&gt;&lt;body&gt;...&lt;/body&gt;&lt;html&gt; tags to indicate encoding).</li>
+
+</ul>
+ 
+<p>
+    How can we recognize page encoding? In many cases it's already known.
+</p>
+
+<p>
+    One option is to parse the document twice. The first pass gives the
+    recognized encoding in the <code>DOMDocument::$encoding</code> property.
+    This way is usable for small documents since it doesn't produce too much
+    overhead with the additional pass.
+</p>
+
+<p>
+    The universal and most correct way is to parse the beginning of the document
+    manually using <a
+        href="http://php.net/manual/en/book.xmlreader.php">XMLReader</a> or the
+    <a href="http://php.net/manual/en/book.xml.php">XML Parser</a> PHP extension
+    (the choice is up to your personal preferences). This approach also provides
+    the ability to check a) if an input string is a complete HTML document or
+    just an HTML fragment; and b) if the document contains comments before the
+    opening &lt;html&gt; tag (and allows you to remove them and later insert
+    them into the loaded document).
+
+</p>
+
+<p>
+    I also want to draw your attention to the following characteristics of
+    <code>DOMDocument::loadHTML()</code>'s behavior:
+</p>
+
+<ul>
+    <li>If an input is an HTML fragment, it's automatically wrapped by &lt;html&gt;&lt;body&gt;...&lt;/body&gt;&lt;/html&gt; (if we've already done it, this feature is not important for us).</li>
+
+    <li>All tags are automatically converted to lower case.</li>
+    <li>The tag auto-closing algorithm differs from the algorithm used by <code>DOMDocument::loadXML()</code> method in recovery mode (the HTML auto-closing algorithm is less greedy).</li>
+    <li><code>DOMDocument::loadHTML()</code> checks if a tag is allowed within the current context. E.g. a &lt;head&gt; tag as not allowed within a &lt;body&gt; section.</li>
+
+    <li><code>DOMDocument::loadHTML()</code> "knows" about standard HTML entities. </li>
+</ul>
+
+<h2>5. Save/dumping operations and encoding</h2>
+
+<p>
+    The <code>DOMDocument::saveXML()</code> and
+    <code>DOMDocument::saveHTML()</code> operations use the following rules to
+    define output encoding:
+
+</p>
+
+<ul>
+    <li>The entire XML dump (using <code>DOMDocument::saveXML()</code> method)
+    encoding is defined by the <code>DOMDocument::$encoding</code> property.
+    It's actually the only case when this property is used. Characters which are
+    not included in the specified character set are dumped as character
+    references (&#XXXX;). If encoding is not recognized during parsing or not
+    mentioned during document creation (the DOM extension doesn't allow setting
+    the encoding attribute to null or any non-valid value later), then output
+    will be created in ASCII and all non-ASCII characters will be dumped as
+    character references.</li>
+
+    <li>Node or XML subtree dumping using the
+    <code>DOMDocument::saveXML($node)</code> method is always performed in
+    UTF-8.</li>
+
+    <li>HTML document dump encoding is defined by the first /html/head/meta http-equiv Content-type tag (and is not affected by <code>DOMDocument::$encoding</code>). Important note: the Content-type tag is searched in case-sensitive mode, so 'html', 'head' and 'meta' tag names as well as the 'content' attribute name must be in lower case. Characters which are not included in the specified character set (all non-ASCII symbols, if content-type tag is not present or contains non-valid symbols from the libxml point of view), are dumped as character references (&#XXXX;).  So we can change the dumped document encoding if necessary (e.g. set it to UTF-8):
+<pre><code>
+$dom = DOMDocument::loadHTML($htmlString);
+...
+$xpath    = new DOMXPath($dom);
+$metaTags = $xpath-&gt;query('/html/head/meta');
+
+// Unfortunately DOMXPath supports only XPath 1.0 and we have to iterate
+// through meta tags instead of selecting the node using
+// '/html/head/meta[lower-case(@http-equiv)="content-type"]'
+// (fn:lower-case() function came with XPath 2.0)
+for ($count = 0; $count &lt; $metaTags-&gt;length; $count++) {
+    $httpEquivAttribute = $metaTags-&gt;item($count)-&gt;attributes-&gt;getNamedItem('http-equiv');
+    if ($httpEquivAttribute !== null  
+        &amp;&amp; strtolower($httpEquivAttribute-&gt;value) == 'content-type'
+    ) {
+        $fragment = $doc-&gt;createDocumentFragment();
+        $fragment-&gt;appendXML('&lt;meta http-equiv="Content-type" content="text/html; charset=UTF-8"/&gt;');
+        $metaTags-&gt;item($count)-&gt;parentNode-&gt;replaceChild($fragment, $metaTags-&gt;item($count));
+        break;
+    }
+}
+// Do nothing if meta tag is not found
+
+</code></pre>
+    Changing the output encoding doesn't affect the actual document content -
+    the browser performs backward conversion during document loading
+    corresponding to the value specified in the Content-Type tag.</li>
+</ul>
+        </div>
+        
+                <a name="comments"></a>
+        <div class="comments">
+            <h1>
+                Comments
+                                    <span class="needlogin">(Login to leave comments)</span>
+
+                            </h1>
+
+                                              <a name="comments-9847"></a>
+                            <div class="node_comments_new_day">Tuesday, September 15, 2009</div>
+                                                                                  <div class="node_comments_inner_odd">
+               
+                                                                     <div class="node_comments_info node_comments_info_member">
+                                    <img src="http://www.gravatar.com/avatar/a61303930b72d8a4fd68dd3fbfb66d4c?s=30&r=g&d=identicon" alt="" />
+                                      <div class="node_comments_subject">
+                    CHARACTER ENCODING ISSUE DOMDOCUMENT::LOADHTML
+                    <br />
+
+                    </div>
+                      <span class="node_comments_date">11:57AM UTC</span>
+                      &middot;
+                      <span class="node_comments_author">
+                                                <a href="http://devzone.zend.com/member/15883-tedmasterweb" title="Author profile and contributions">
+                         tedmasterweb
+                         </a>
+                                
+                      </span>
+                                     </div>
+
+               <div class="node_comments_body page_middle_links">
+               Thank you, thank you, THANK YOU!!!!<br />
+<br />
+This is an awesome article, extremely well written and addressed the exact issue I was having. I simply cannot thank you enough!<br />
+<br />
+Sincerely,<br />
+<br />
+Ted Stresen-Reuter<br />
+http://tedmasterweb.com<br />
+
+               </div>
+             </div> 
+                                                <a name="comments-11310"></a>
+                            <div class="node_comments_new_day">Thursday, November 12, 2009</div>
+                                                                                  <div class="node_comments_inner_even">
+               
+                                                                     <div class="node_comments_info node_comments_info_member">
+                                    <img src="http://www.gravatar.com/avatar/29a8af5be45a314e79c909a99b66f528?s=30&r=g&d=identicon" alt="" />
+                                      <div class="node_comments_subject">
+                    THANK
+                    <br />
+
+                    </div>
+                      <span class="node_comments_date">3:59PM UTC</span>
+                      &middot;
+                      <span class="node_comments_author">
+                                                <a href="http://devzone.zend.com/member/24125-buynowlcdhdtv" title="Author profile and contributions">
+                         buynowlcdhdtv
+                         </a>
+                                
+                      </span>
+                                     </div>
+
+               <div class="node_comments_body page_middle_links">
+               Thank a lot
+               </div>
+             </div> 
+                                                <a name="comments-11833"></a>
+                            <div class="node_comments_new_day">Sunday, February 14, 2010</div>
+                                                                                  <div class="node_comments_inner_odd">
+               
+                                                                     <div class="node_comments_info node_comments_info_member">
+                                    <img src="http://www.gravatar.com/avatar/b14f1388cbefa56a70c701260034a065?s=30&r=g&d=identicon" alt="" />
+
+                                      <div class="node_comments_subject">
+                    MORE INFO ON SUBJECT
+                    <br />
+                    </div>
+                      <span class="node_comments_date">5:52PM UTC</span>
+                      &middot;
+                      <span class="node_comments_author">
+                                                <a href="http://devzone.zend.com/member/25045-expablo" title="Author profile and contributions">
+                         expablo
+                         </a>
+
+                                
+                      </span>
+                                     </div>
+               <div class="node_comments_body page_middle_links">
+               DOMNode::$nodeValue will automatically convert HTML entities in utf-8 chars (When node type is #text). And not just basic HTML entities like &amp;lt; and &amp;gt; but complex ones too. For example:<br />
+<br />
+&amp;#21488;&amp;#21271;<br />
+<br />
+will be converted in (you should see 2 Chinese chars):<br />
+
+<br />
+台北<br />
+<br />
+In this same example, DOMDocument::saveHTML() will return HTML entities as they are. Try this to see it for yourself:<br />
+<br />
+&lt;?php<br />
+<br />
+$html = '&lt;p&gt;&amp;#21488;&amp;#21271;&lt;/p&gt;';<br />
+
+$doc = new DOMDocument();<br />
+$doc-&gt;loadHTML($html);<br />
+<br />
+// Dump HTML<br />
+echo $doc-&gt;saveHTML();<br />
+<br />
+// Dump text<br />
+$root = $doc-&gt;documentElement;<br />
+
+foreach($root-&gt;childNodes as $child)<br />
+  echo $child-&gt;nodeValue;<br />
+<br />
+?&gt;<br />
+<br />
+<br />
+The output will look something like this:<br />
+<br />
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/REC-html40/loose.dtd&quot;&gt;<br />
+
+&lt;html&gt;&lt;body&gt;&lt;p&gt;&amp;#21488;&amp;#21271;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;<br />
+台北<br />
+<br />
+<br />
+Tested with PHP 5.3.0<br />
+<br />
+I believe you should explicitly take care of all input and output, before and after parsing with this DOM extension. Just to make sure, because such behaviors are not documented in, otherwise excellent, official PHP documentation. I'll go download the PHP source and see if I can figure out all the details. My C is a bit rusty, but I hope I'll get what I need. <br />
+
+<br />
+<br />
+<br />
+
+               </div>
+             </div> 
+                                           </div>
+              </div>
+                
+                      <div id="col-right">
+                  
+        <div align="center" class="sidebar_inner" style="background: white; margin-left:-20px;" >
+            <p class="freetitle">Free community products:</p>
+
+            <a href="http://www.eclipse.org/pdt/">
+                <img src="/images/logos/pdt-logo.jpg"  border="0" />
+            </a>
+            <a href="http://framework.zend.com/">
+                <img src="/images/logos/zf-logo.jpg"  border="0" />
+            </a>
+            <a href="http://www.zend.com/community/zend-server-ce">
+                <img src="/images/logos/zend-server-ce-logo.jpg"  border="0" />
+            </a>
+
+        </div>
+        <p></p>
+        <div align="center" class="sidebar_inner" style="background: white; margin-left:-20px;" >
+            <a href="http://www.zend.com/devzone_webinar">
+                <img src="/images/devzone-free-webinars.jpg"  border="0" />
+            </a>
+        </div>
+        <p></p>
+        <div align="center" class="sidebar_inner" style="background: white; margin-left:-20px;" >
+
+            Follow DevZone on:<br />
+            <a href="http://twitter.com/devzone"><img
+                 src="http://twitter-badges.s3.amazonaws.com/twitter-b.png"
+                  alt="Follow DevZone on Twitter"/></a>
+        </div>
+      </div>                <div class="clearfix"></div>
+                <div id="footer">
+                    <a href="http://framework.zend.com" title="Powered By Zend Framework"><img src="/images/PoweredBy_ZF_4DarkBG.png" align="right" /></a><strong>Copyright &copy; 1999 - 2010 by Zend Technologies Ltd. All rights reserved.</strong><br />
+
+                    Zend is a trademark of Zend Technologies Ltd. |
+                    <a href='javascript:window.location="mai"+"lto:"+"devzone"+"@"+"zend"+"."+"com";' > Contact Us</a><br />
+
+                    
+                                    </div>
+            </div>
+        </div>
+
+
+<script type="text/javascript" language="javascript" src="/js/elqNow/elqCfg.js"></script>
+<script type="text/javascript" language="javascript" src="/js/elqNow/elqImg.js"></script>
+

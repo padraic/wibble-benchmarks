@@ -1,0 +1,378 @@
+	<script type="text/javascript" charset="utf-8">
+	jQuery(document).ready(function(){
+		jQuery( '.login-form' ).each( function() {
+			var lForm = this;
+
+			// init fields
+			if(jQuery('.user-login-input', lForm).val() !== '')
+				jQuery('.userlogin-label span', lForm).hide();
+				
+			if(jQuery('.user-pass-input', lForm).val() !=  '')
+				jQuery('.password-label span', lForm).hide();
+
+			// on focus
+			jQuery('.userlogin-label input', lForm).focus(function() {
+				jQuery('.userlogin-label span', lForm).fadeTo(100, 0.5);
+				
+				if(jQuery('.user-login-input', lForm).val() !== '')
+				jQuery('.userlogin-label span', lForm).hide();
+				
+				if(jQuery('.user-pass-input', lForm).val() !=  '')
+				jQuery('.password-label span', lForm).hide();
+				
+			});
+			
+			jQuery('.password-label input', lForm).focus(function() {
+				jQuery('.password-label span', lForm).fadeTo(100, 0.5);
+				
+				if(jQuery('.user-pass-input', lForm).val() !==  '')
+				jQuery('.password-label span', lForm).hide();
+			});
+			
+			//on keydown
+			jQuery('.userlogin-label input', lForm).keydown(function() {
+    				if(jQuery('.userlogin-label span', lForm).is(':visible') )
+    				jQuery('.userlogin-label span', lForm).hide();
+   			});
+			
+			jQuery('.password-label input', lForm).keydown(function() {
+				if(jQuery('.password-label span', lForm).is(':visible') )
+				jQuery('.password-label span', lForm).hide();
+			});
+			
+			//on click
+			jQuery('.password-label', lForm).click(function() {
+				jQuery('.user-pass-input', lForm).trigger('focus');
+				if(jQuery('.user-pass-input', lForm).val() !==  '')
+				jQuery('.password-label span', lForm).hide();
+			});
+			jQuery('.userlogin-label', lForm).click(function() {
+				jQuery('.user-login-input', lForm).trigger('focus');
+				if(jQuery('.user-login-input', lForm).val() !== '')
+				jQuery('.userlogin-label span', lForm).hide();
+			});
+			
+			//on blur
+			jQuery('.user-login-input', lForm).blur(function() {
+				if( jQuery('.user-login-input', lForm).val() ==  '') {
+					jQuery('.userlogin-label span', lForm).show();
+					jQuery('.userlogin-label span', lForm).fadeTo(100, 1);
+				}
+				if(jQuery('.user-login-input', lForm).val() !== '')
+				jQuery('.userlogin-label span', lForm).hide();
+			});
+			jQuery('.user-pass-input', lForm).blur(function() {
+				if( jQuery('.user-pass-input', lForm).val() ==  '') {
+					jQuery('.password-label span', lForm).show();
+					jQuery('.password-label span', lForm).fadeTo(100, 1);
+				}
+				if(jQuery('.user-pass-input', lForm).val() !==  '')
+				jQuery('.password-label span', lForm).hide();
+			});
+
+		});
+	} );
+	</script>
+<!-- google_ad_section_start(weight=ignore) -->
+<div id="adminbar">
+	<form name="loginform" class="login-form" id="adminbarlogin" action="https://en.wordpress.com/wp-login.php" method="post">
+	<label class="login userlogin-label" id="userlogin_label"><span>Username</span><input class="adminbar-input user-login-input" type="text" name="log" id="user_login" value="" tabindex="1" /></label>
+	<label class="login password-label" id="password_label"><span>Password</span><input class="adminbar-input user-pass-input" type="password" name="pwd" id="user_pass" value="" tabindex="2" /></label>
+	<input type="hidden" id="testcookie" class="testcookie" name="testcookie" value="0" />
+		<input type="hidden" id="redirect_to" name="redirect_to" value="http://wordpress.com/" />
+
+	<button class="adminbar-button" type="submit" name="submit" id="login-form" tabindex="4"><span>Log In</span></button>
+	<span class="adminbar-loginmeta"><input name="rememberme" type="checkbox" id="rememberme" value="forever" tabindex="3" checked="checked" />
+	<label for="rememberme">Remember me</label>
+	<a href="http://wordpress.com/wp-login.php?action=lostpassword">Lost your password?</a></span>
+	<script type="text/javascript">
+	<!--
+	document.cookie='TESTCOOKIE=home; expires=Sat, 17 Jul 2010 18:36:18 +0000; path=/';jQuery('.testcookie').val('1');
+	// -->
+	</script>
+	</form>
+	<form action="http://en.search.wordpress.com/" method="get" id="adminbarsearch">
+
+	<input class="adminbar-input" name="q" id="q" type="text" value="Search WordPress.com Blogs" maxlength="150" onfocus="this.value=(this.value=='Search WordPress.com Blogs') ? '' : this.value;" onblur="this.value=(this.value=='') ? 'Search WordPress.com Blogs' : this.value;" /> <button type="submit" class="adminbar-button"><span>Search</span></button>
+	</form>
+</div>
+<!-- google_ad_section_end -->
+<div id="wrapper" class="en-wrapper">
+	
+		
+
+
+<div class="pagebody">
+
+	<div id="header">
+		<h1 class="logo" style="cursor: pointer;" onclick="location.href='/fresh/'">WordPress.com</h1>
+
+		
+			<form id="language" name="language" action="">
+		<label for="language-select">Language:</label>
+		<select id="language-select" name="languagesel" onchange="gotoFunction();">
+			<option value="http://wordpress.com/">English</option>
+			<option value='http://es.wordpress.com/' >Espa&#241;ol</option><option value='http://de.wordpress.com/' >Deutsch</option><option value='http://pt-br.wordpress.com/' >Portugu&#234;s do Brasil</option><option value='http://fr.wordpress.com/' >Fran&#231;ais</option><option value='http://it.wordpress.com/' >Italiano</option><option value='http://id.wordpress.com/' >Bahasa Indonesia</option><option value='http://nl.wordpress.com/' >Nederlands</option><option value='http://sv.wordpress.com/' >Svenska</option><option value='http://pt.wordpress.com/' >Portugu&#234;s</option><option value='http://tr.wordpress.com/' >T&#252;rk&#231;e</option>			<option value="/languages/">More Languages</option>
+
+		</select>
+	</form>
+	</div>
+	
+	<div id="lang-guess-wrap"></div>
+	
+	
+		<div class="signupsidebar">
+			<h2>Express yourself. Start a blog.</h2>
+			<a class="bigassbutton" href="/signup/?ref=bigassorange"><span>Sign up now</span></a>
+			<p class="call">In seconds, you&#8217;ll have a blog with amazing <a href="/features/">free features</a> like&#8230;</p>
+
+			
+			<h3>Stats to obsess over</h3>
+			<p class="signupstats"><span id="statsx1">&nbsp;</span><span id="statsx2">&nbsp;</span><a href="/features/">Our stats</a> are designed to give you up-to-the-minute data about your visitors: how many there are, where they&#8217;re coming from, which posts are most popular, and which search engine terms are sending visitors to your blog.</p>
+			
+			<h3 class="signupthemes"><img src="http://s.wordpress.com/wp-content/themes/h4/i/signup/themes.png" alt="Themes" width="118" height="100" />Gorgeous themes</h3>
+			<p>You can change the look of your blog with over 100 <a href="/features/">attractive themes</a> ranging from professional to fun to crazy, and you can switch themes with one click.</p>
+
+			
+			<h3>Widgets galore</h3>
+			<p class="signupwidgets"><img src="http://s.wordpress.com/wp-content/themes/h4/i/signup/widgets.png" alt="Widgets" width="62" height="61" />It&#8217;s easy to share Twitter posts, add Flickr photos, aid a SocialVibe cause, and do <a href="/features/">lots more</a> without touching any code. Just drag and drop the widgets around, and instantly you can have fun stuff in your sidebar.</p>
+			<p class="call"><a href="/features/">Learn more</a> or <a class="signuptxt" href="/signup/?ref=bottomtext">sign up now.</a></p>
+		</div>
+
+	
+		
+	<div id="home-tabs">
+							<div id="editorpicks" class="homediv current loaded">
+		<div id="fp-1" class="fp-page">
+	<div class="editorrow first">
+		<div class="title"><span class="story"><span class="freshly">Freshly Pressed:</span> <span id="fprss"><a href="http://freshlypressed.wordpress.com/feed/">Subscribe</a></span> <span class="thebestof">The best of <strong>271,762</strong> bloggers, <strong>345,320</strong> new posts, <strong>367,502</strong> comments, <span class="amp">&amp;</span> <strong>78,540,971</strong> words today on WordPress.com.</span></span></div>
+
+		<div class="pick"><div class="leftnum"></div><a href="http://bowlphilosophy.wordpress.com/2010/07/07/world-cup-semi-final-prediction-germany-vs-spain/" class="story"><span class="picture" id="picture_13193642_1486" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fs.ytimg.com%2Fvi%2F2S_TV1d9FWE%2Fhqdefault.jpg'); background-repeat: no-repeat; background-position: 0 -20px;"></span><span class="posttitle">World Cup Semi Final Prediction &#8211; Germany vs Spain </span><small>Bowl Philosophy&#039;s Blog</small></a></div><div class="pick"><div class="leftnum"></div><a href="http://thelocalgypsy.com/2010/07/06/american-pie/" class="story"><span class="picture" id="picture_13010955_409" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fs.ytimg.com%2Fvi%2FBBOQiMxwk1o%2Fhqdefault.jpg'); background-repeat: no-repeat; background-position: 0 -20px;"></span><span class="posttitle">American &#8220;Pie&#8221; </span><small>the local gypsy</small></a><a href="http://en.wordpress.com/tag/food/" class="tagazine">Posts about food →</a></div></div><div class="editorrow"><div class="pick"><div class="leftnum"></div><a href="http://ceciiil.wordpress.com/2010/07/07/the-egoless-knowledge-worker/" class="story"><span class="picture" id="picture_1223463_2867" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fimg.timeinc.net%2Ftime%2Fphotoessays%2F2007%2Fvintage_computers%2Fvintage_computers_11.jpg'); background-repeat: no-repeat; background-position: 0 -20px;"></span><span class="posttitle">The Egoless Knowledge Worker </span><small>hypertextual</small></a><a href="http://en.wordpress.com/tag/culture/" class="tagazine">Posts about culture →</a></div><div class="pick"><div class="leftnum"></div><a href="http://hightalk.net/2010/07/07/our-gigantic-impulse-control-disorder/" class="story"><span class="picture" id="picture_6188279_2121" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fhightalk.files.wordpress.com%2F2010%2F07%2Finternetaddict.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 -60px;"></span><span class="posttitle">Our Gigantic Impulse Control Disorder </span><small>HighTalk</small></a></div><div class="pick"><div class="leftnum"></div><a href="http://amylane.wordpress.com/2010/07/07/how-to-make-a-window-sticker/" class="story"><span class="picture" id="picture_6234852_592" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Famylane.files.wordpress.com%2F2010%2F07%2Fdsc07284.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 -50px;"></span><span class="posttitle">How to make a window sticker </span><small>Cooking, Cakes &amp; Children</small></a><a href="http://en.wordpress.com/tag/family/" class="tagazine">Posts about family →</a></div></div><div class="editorrow"><div class="pick"><div class="leftnum"></div><a href="http://mypajamadays.com/2010/07/07/my-life-ten-years-from-now/" class="story"><span class="picture" id="picture_12092708_855" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/mshots/v1/http%3A%2F%2Fmypajamadays.com%2F2010%2F07%2F07%2Fmy-life-ten-years-from-now%2F?w=223'); background-repeat: no-repeat; background-position: 0 0px;"></span><span class="posttitle">My Life, Ten Years From Now </span><small>Pajama Days</small></a><a href="http://en.wordpress.com/tag/life/" class="tagazine">Posts about life →</a></div><div class="pick"><div class="leftnum"></div><a href="https://mnprairieroots.wordpress.com/2010/07/07/in-praise-of-preserving-country-churches/" class="story"><span class="picture" id="picture_8589567_3804" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fmnprairieroots.files.wordpress.com%2F2010%2F07%2Fcopy-of-moland-048.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 -170px;"></span><span class="posttitle">In praise of preserving country churches </span><small>Minnesota Prairie Roots</small></a><a href="http://en.wordpress.com/tag/art/" class="tagazine">Posts about art →</a></div><div class="pick"><div class="leftnum"></div><a href="http://vegetarilin.wordpress.com/2010/07/07/my-carbon-footprint/" class="story"><span class="picture" id="picture_10851542_299" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fvegetarilin.files.wordpress.com%2F2010%2F07%2Fgatlinburg-084.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 -20px;"></span><span class="posttitle"> My Carbon Footprint </span><small>Vegetarilin&#039;s Blog</small></a><a href="http://en.wordpress.com/tag/travel/" class="tagazine">Posts about travel →</a></div></div><div class="editorrow"><div class="pick"><div class="leftnum"></div><a href="http://creativespark.wordpress.com/2010/07/07/shanghais-little-blue-men/" class="story"><span class="picture" id="picture_722591_2713" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fcreativespark.files.wordpress.com%2F2010%2F07%2Fhaibao1_creativespark.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 -60px;"></span><span class="posttitle">Shanghai&#8217;s Little Blue Men </span><small>Creative Spark</small></a><a href="http://en.wordpress.com/tag/photography/" class="tagazine">Posts about photography →</a></div><div class="pick"><div class="leftnum"></div><a href="http://chefyourself.wordpress.com/2010/07/07/eating-summer-mango-mousse/" class="story"><span class="picture" id="picture_9907975_1669" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2Fchefyourself.files.wordpress.com%2F2010%2F07%2Fmango-mousse-cover1.jpg%3Fw%3D223'); background-repeat: no-repeat; background-position: 0 0px;"></span><span class="posttitle">Eating Summer: mango mousse </span><small>Chef It Yourself</small></a></div><div class="pick"><div class="leftnum"></div><a href="http://gapmymind.wordpress.com/2010/07/07/id-like-to-be-under-the-sea-in-an-octopus-garden-with-you/" class="story"><span class="picture" id="picture_5749332_1761" style="height: 82px; width: 222px; overflow: hidden; margin-bottom: 5px; display: block; background-image: url('http://s.wordpress.com/imgpress?w=223&#038;url=http%3A%2F%2F4.bp.blogspot.com%2F_bEBzZgZ5Tmc%2FSPo52FCnSVI%2FAAAAAAAAOkc%2F-GmpKHvV4dM%2Fs400%2Fringo%2Bstarr%2Bpeace.jpg'); background-repeat: no-repeat; background-position: 0 -60px;"></span><span class="posttitle">i&#8217;d like to be under the sea in an octopus&#8217; garden with you. </span><small>Gap My Mind</small></a><a href="http://en.wordpress.com/tag/music/" class="tagazine">Posts about music →</a></div></div>
+
+<script type="text/javascript">
+<!--
+-->
+</script>
+<div style="clear:both;height:0px;width:717px"></div>
+</div>
+
+<div id="fpnav">
+	<a class="earlier" href="?fp=2" >Earlier</a>
+	<a class="later" href="?fp=0" style="display:none">Later</a>
+	<img id="fploading" src="http://wordpress.com/wp-content/themes/h4/i/ajax-loader.gif" style="display:none" alt="Loading..." />
+</div>
+<script type="text/javascript">
+<!--
+function setNavClicks(page, maxpage) {
+jQuery('div#fpnav a.earlier').unbind('click').click(function(){
+	jQuery("#fploading").fadeIn();
+	jQuery.get('/?load=editorpicks&fp='+(page+1)+'&rand='+Math.random(),
+		function(data) {
+			jQuery("#fploading").fadeOut();
+			jQuery("#fpnav a").unbind('click').click(function(){return false;});
+			var left='#fp-'+page;
+			var right='#fp-'+(page+1);
+			jQuery(data).hide().insertAfter(left);
+			var lheight=jQuery(left).outerHeight(true);
+			var rheight=jQuery(right).outerHeight(true);
+			var eheight1=jQuery('#editorpicks').height();
+			var eheight2=eheight1 - lheight + rheight;
+			jQuery("#editorpicks")
+				.css({'height':eheight1+'px'});
+			jQuery("#fpnav")
+				.css({'position':'absolute'});
+			jQuery("#editorpicks")
+				.animate({'height':eheight2});
+			jQuery(left)
+				.css({'position':'absolute'})
+				.animate({'left':'-717px','opacity':'hide'},
+					function(){jQuery(left).remove();});
+			jQuery(right)
+				.css({'position':'absolute','top':'0px','left':'717px'})
+				.show()
+				.animate({'left':'0px'});
+			if ( page == 1 )
+				jQuery("#fpnav .later").fadeIn();
+			if ( page + 1 == maxpage )
+				jQuery("#fpnav .earlier").unbind('click').fadeOut();
+		});
+	return false;
+}).attr({'href':'#earlier'});
+jQuery('div#fpnav a.later').unbind('click').click(function(){
+	jQuery("#fploading").fadeIn();
+	jQuery.get('/?load=editorpicks&fp='+(page-1)+'&rand='+Math.random(),
+		function(data) {
+			jQuery("#fploading").fadeOut();
+			jQuery("#fpnav a").unbind('click').click(function(){return false;});
+			var left='#fp-'+(page-1);
+			var right='#fp-'+page;
+			jQuery(data).hide().insertBefore(right);
+			var lheight=jQuery(left).outerHeight(true);
+			var rheight=jQuery(right).outerHeight(true);
+			var eheight1=jQuery('#editorpicks').height();
+			var eheight2=eheight1 - rheight + lheight;
+			jQuery("#editorpicks")
+				.css({'height':eheight1+'px'});
+			jQuery("#fpnav")
+				.css({'position':'absolute'});
+			jQuery("#editorpicks")
+				.animate({'height':eheight2});
+			jQuery(right)
+				.css({'position':'absolute'})
+				.animate({'left':'717px','opacity':'hide'},
+					function(){jQuery(right).empty().remove();});
+			jQuery(left)
+				.css({'position':'absolute','top':'0px','left':'-717px'})
+				.show()
+				.animate({'left':'0px'});
+			if ( page - 1 == 1 )
+				jQuery("#fpnav .later").unbind('click').fadeOut();
+			if ( page == maxpage )
+				jQuery("#fpnav .earlier").fadeIn();
+		});
+	return false;
+}).attr({'href':'#later'});
+jQuery("#editorpicks").css({'border':'none'}); // Inexplicably required by IE.
+}
+setNavClicks(1, 213);
+-->
+</script>
+
+</div>
+			
+		
+	</div> 
+</div>
+
+
+<!-- google_ad_section_start(weight=ignore) -->
+<div id="footer">
+	<div class="c1">
+		<h4>On WordPress.com</h4>
+		<ul>
+			<li><a href="http://en.support.wordpress.com/" title="We&#8217;re here for you">24/7 Support</a></li>
+
+			<li><a href="http://en.forums.wordpress.com/" title="Communicate with your fellow WordPress.com bloggers">Forums</a></li>
+			<li><a href="http://en.wordpress.com/features/" title="A sampling of the many features WordPress.com offers" hreflang="en">Free Features</a></li>
+			<li><a href="http://en.wordpress.com/products/" title="Value-added upgrades available a la carte" hreflang="en">Premium Features</a></li>
+			<li><a href="http://vip.wordpress.com/" title="For the best sites in the world" hreflang="en">VIP Hosting</a></li>
+			<li><a href="http://en.wordpress.com/advanced-services/" title="Of interest to our advanced users" hreflang="en">Advanced Services</a></li>
+			<li><a href="http://en.wordpress.com/tags/" title="Current topics and tags" hreflang="en">Popular Tags</a></li>
+
+		</ul>
+	</div>
+	<div class="c2">
+		<h4>Also cool</h4>
+		<ul>
+			<li><a href="http://support.wordpress.com/apps/" title="Apps for WordPress">WordPress Apps</a></li>
+			<li><a href="http://wordpress.org/" title="Self-hosted, non-profit version">WordPress.org</a></li>
+
+			<li><a href="http://wordpress.tv/" title="Your visual guide to WordPress">WordPress.tv</a></li>
+			<li>Follow us on <a href="http://www.facebook.com/WordPress" title="Facebook fan page for WordPress">Facebook</a> &amp; <a href="http://twitter.com/wordpressdotcom" title="WordPress.com on Twitter">Twitter</a></li>
+			<li><a href="http://polldaddy.com/?ad=wp.com" title="PollDaddy.com online survey software">PollDaddy Online Surveys</a></li>
+			<li><a href="http://videopress.com/" title="VideoPress">VideoPress Video Sharing</a></li>
+			<li><a href="http://ma.tt/" title="Founder of Automattic, example of what WordPress can do" hreflang="en">Matt Mullenweg</a></li>
+
+		</ul>
+	</div>
+	<div class="c3">
+<a href="http://wordpress.tv/flavor/wordpresscom/"><img src="http://wordpress.com/wp-content/themes/h4/i/footerpromo/wordpresstv.png" alt="WordPress.tv" width="226" height="181" /></a>	</div>
+	<div class="c4">
+		<h4>From our blog</h4>
+				<ul>
+			<li><a href="http://en.blog.wordpress.com/2010/07/01/telephone/">Phone Your Blog</a></li><li><a href="http://en.blog.wordpress.com/2010/07/01/support-the-first-amendment-with-1-for-all/">Support the First Amendment with 1 for All</a></li><li><a href="http://en.blog.wordpress.com/2010/06/25/overcome-writers-block-with-plinky-prompts/">Overcome Writer’s Block With Plinky Prompts</a></li><li><a href="http://en.blog.wordpress.com/2010/06/24/new-theme-modularity-lite/">New Theme: Modularity Lite</a></li><li><a href="http://en.blog.wordpress.com/2010/06/22/new-theme-koi/">New Theme: Koi</a></li><li><a href="http://en.blog.wordpress.com/2010/06/18/200000000-posts-and-counting/">200,000,000 Posts… and Counting</a></li>			<li><a class="readmore" href="http://en.blog.wordpress.com/">Read more&#8230;</a></li>
+
+		</ul>
+	</div>
+
+<p class="automattic"><span>An <a href="http://automattic.com/"><img src="http://s.wordpress.com/wp-content/themes/h4/i/automattic.png?1" alt="Automattic" width="102" height="9" /></a> Production</span> <a href="http://en.wordpress.com/about/" title="A short introduction to your hosts" hreflang="en">About Us</a> &#8226; <a href="http://en.wordpress.com/tos/" title="Some legalese">Terms of Service</a> &#8226; <a href="http://automattic.com/privacy/" title="We are profoundly disinterested in your private details">Privacy</a></p>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+<!--
+addLoadEvent(function(){jQuery('#user_login').focus();});
+// -->
+</script>
+
+<script type="text/javascript" src="http://wordpresscom.skimlinks.com/api/wordpress.js"></script>
+<script type="text/javascript">
+var skimlinks_pub_id = "725X1342";
+var skimlinks_sitename = 'wordpress.com';
+var skimlinks_domain = "go2.wordpress.com";
+skimlinks();
+</script>
+<script type="text/javascript">
+// <![CDATA[
+if (typeof jah != 'function'){
+function jah(url,target) {
+	var rec = null;
+    // native XMLHttpRequest object
+    if (window.XMLHttpRequest) {
+        req = new XMLHttpRequest();
+        req.onreadystatechange = jahDoneFact(req, target);
+        req.open('GET', url, true);
+        req.send(null);
+    // IE/Windows ActiveX version
+    } else if (window.ActiveXObject) {
+        req = new ActiveXObject('Microsoft.XMLHTTP');
+        if (req) {
+            req.onreadystatechange = function() {jahDone(req, target);};
+            req.open('GET', url, true);
+            req.send();
+		}
+	}
+}
+}
+
+if (typeof jahDone != 'function') {
+function jahDone(r, target) {
+    // only if req is "loaded"
+    if (r.readyState == 4) {
+        // only if "OK"
+        if (r.status == 200) {
+            results = r.responseText;
+            document.getElementById(target).innerHTML = results;
+        }
+	}
+}
+}
+
+if (typeof jahDoneFact != 'function') {
+function jahDoneFact(r, t) {
+	return function() {jahDone(r, t);}
+}
+}	jah( '/lang-guess-ajax.php?uri=%2F&forums=0', 'lang-guess-wrap' );
+// ]]>	
+</script>
+<script type="text/javascript">_qacct='p-18-mFEk4J448M';_qoptions={labels:'adt.0,language.en,wp.homepage'};</script>
+<script type="text/javascript" src="//secure.quantserve.com/quant.js"></script>
+
+<noscript><p><img class="robots-nocontent" src="//secure.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=adt.0%2Clanguage.en%2Cwp.homepage" style="display:none" height="1" width="1" alt="" /></p></noscript>
+<script type="text/javascript" src="http://b.scorecardresearch.com/beacon.js"></script><script type="text/javascript">try{COMSCORE.beacon({c1:2,c2:7518284});}catch(e){}</script><noscript><p class="robots-nocontent"><img src="http://b.scorecardresearch.com/p?cj=1c1=2&#038;c2=7518284" alt="" style="display:none" width="1" height="1" /></p></noscript>	<script type="text/javascript">
+	/* <![CDATA[ */
+		if ( jQuery("#homenav").length ) {
+			if ( jQuery.query.get('my-blogs') ) wpcom_tab_request( jQuery( 'li.my-blogs' ) );
+			else if ( jQuery.query.get('fresh') ) wpcom_tab_request( jQuery( 'li.fresh' ) );
+			else if ( jQuery.query.get('tags') ) wpcom_tab_request( jQuery( 'li.tags' ) );
+			else if ( jQuery.query.get('likes') ) wpcom_tab_request( jQuery( 'li.likes' ) );
+			else if ( jQuery.query.get('quickpress') ) wpcom_tab_request( jQuery( 'li.quickpress' ) );
+			else if ( jQuery.query.get('reader') ) wpcom_tab_request( jQuery( 'li.reader' ) );
+			else if ( jQuery.query.get('subs') ) wpcom_tab_request( jQuery( 'li.subs' ) );
+				
+			else if ( null != jQuery.cookie('wpcom_active_tab') && jQuery( 'li.' + jQuery.cookie('wpcom_active_tab').replace( ' current', '' ) ).length ) {
+				wpcom_tab_request( jQuery( 'li.' + jQuery.cookie('wpcom_active_tab').replace( ' current', '' ) ) );
+				window.location.hash = jQuery.cookie('wpcom_active_tab').replace( ' current', '' );
+			}
+		}
+	/* ]]> */	
+	</script><script src="http://s.stats.wordpress.com/w.js?19" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'1','v':'wpcom','user_id':'0','post':'0','subd':'wordpress.com'});
+ex_go({'crypt':'RDZ8LFkxbXFISXdsfGp6L2FQWU8zRFNZZkYuYXV+eUpHUTFGXXElU200VDhORC10UUpMbTZ3W19MZTl1TEUvMVtteFQ4Kz1+RiZmSEdYdHZuY3VidjFPLEFWLStvRk9iY1ZJYSs3M2hdUTJTZm5KVDRdaFddPz1rXThwLlNIP1pnaUtJRHZiMm8mJiVuN1tZRz14Lm93SVpsc20vaU80TWJueXI/eWtjRA=='});
+addLoadEvent(function(){linktracker_init('1',0);});
+	</script>
+<!-- google_ad_section_end -->
+
