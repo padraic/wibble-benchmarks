@@ -1,0 +1,36 @@
+Wibble Benchmarks against HTMLPurifier and HtmLawed
+
+Wibble?
+
+Wibble is a proposed HTML Sanitiser for Zend Framework 2.0. This benchmark
+compares its speed against two common alternatives in PHP. The benchmark requires
+PHP 5.3 since Wibble is a ZF 2.0 targeted library.
+
+Setup:
+
+1. Clone from git - doh!
+
+2. Install PEAR Benchmark package:
+    pear install Benchmark
+    
+3. Run benchmark!
+    php benchmark.php
+    
+Options:
+
+Benchmark runs a filter operation per library across three types of files
+of varying size, text content and markup heaviness. The operation is run
+100 times by default (can edit benchmark.php to adjust) and the aggregate time
+taken is reported.
+
+What you should see:
+
+Wibble outperform HTMLPurifier in all tests. It will outperform HtmLawed also
+for the Big and Medium tests. The Medium test will be a close call. On the Small
+test, HtmLawed should be approximately twice as fast as Wibble since the smaller
+input size won't put much stress on its regular expressions.
+
+If you see result that are significantly different, please report them! Same goes
+if you have any ideas about making the benchmark fairer than this admittedly
+simplistic approach.
+
