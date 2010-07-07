@@ -102,8 +102,8 @@ echo PHP_EOL, PHP_EOL;
 echo 'Wibble Pass #1 - Small File:', PHP_EOL;
 $timer->start();
 
-$fragment = new \Wibble\HTML\Fragment($smallInput);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $fragment = new \Wibble\HTML\Fragment($smallInput);
     $fragment->filter();
 }
 
@@ -161,8 +161,8 @@ echo PHP_EOL, PHP_EOL;
 echo 'Wibble Pass #2 - Medium File:', PHP_EOL;
 $timer->start();
 
-$fragment = new \Wibble\HTML\Fragment($mediumInput);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $fragment = new \Wibble\HTML\Fragment($mediumInput);
     $fragment->filter();
 }
 
@@ -220,8 +220,8 @@ echo PHP_EOL, PHP_EOL;
 echo 'Wibble Pass #3 - Big File:', PHP_EOL;
 $timer->start();
 
-$fragment = new \Wibble\HTML\Fragment($bigInput);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $fragment = new \Wibble\HTML\Fragment($bigInput);
     $fragment->filter();
 }
 
