@@ -17,7 +17,7 @@ require_once 'Wibble/Loader.php';
 $loader = new \Wibble\Loader();
 $loader->register();
 define('HTMLPURIFIER_CACHE', __DIR__ . '/cache');
-define('BENCHMARK_ITERATIONS', 100);
+define('BENCHMARK_ITERATIONS', 200);
 
 /**
  * Benchmark WIP - Install "Benchmark" package from PEAR
@@ -61,10 +61,10 @@ echo 'PASS #1 - SMALL FILE', PHP_EOL, '=========================================
 echo 'HTMLPurifier Pass #1 - Small File:', PHP_EOL;
 $timer->start();
 
-$config = HTMLPurifier_Config::createDefault();
-$config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
-$purifier = new HTMLPurifier($config);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $config = HTMLPurifier_Config::createDefault();
+    $config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
+    $purifier = new HTMLPurifier($config);
     $purifier->purify($smallInput);
 }
 
@@ -88,7 +88,11 @@ echo 'htmLawed Pass #1 - Small File:', PHP_EOL;
 $timer->start();
 
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
-    htmlawed($smallInput, array('safe'=>1,'deny_attribute'=>'style'));
+    $config = array(
+        'safe' => 1, 'deny_attribute' => '* -name', 'make_tag_strict' => 1,
+        'no_deprecated_attr' => 1, 'elements' => 'em'
+    );
+    htmlawed($smallInput, $config);
 }
 
 $timer->stop();
@@ -120,10 +124,10 @@ echo 'PASS #2 - MEDIUM FILE', PHP_EOL, '========================================
 echo 'HTMLPurifier Pass #2 - Medium File:', PHP_EOL;
 $timer->start();
 
-$config = HTMLPurifier_Config::createDefault();
-$config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
-$purifier = new HTMLPurifier($config);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $config = HTMLPurifier_Config::createDefault();
+    $config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
+    $purifier = new HTMLPurifier($config);
     $purifier->purify($mediumInput);
 }
 
@@ -147,7 +151,11 @@ echo 'htmLawed Pass #2 - Medium File:', PHP_EOL;
 $timer->start();
 
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
-    htmlawed($mediumInput, array('safe'=>1,'deny_attribute'=>'style'));
+    $config = array(
+        'safe' => 1, 'deny_attribute' => '* -name', 'make_tag_strict' => 1,
+        'no_deprecated_attr' => 1, 'elements' => 'em'
+    );
+    htmlawed($mediumInput, $config);
 }
 
 $timer->stop();
@@ -170,7 +178,7 @@ $timer->stop();
 $timer->display();
 echo PHP_EOL, PHP_EOL;
 
-echo 'PASS #2 - MEDIUM FILE', PHP_EOL, '=============================================', PHP_EOL, PHP_EOL;
+echo 'PASS #3 - BIG FILE', PHP_EOL, '=============================================', PHP_EOL, PHP_EOL;
 
 /**
  * HTMLPurifier Pass #3 - Big File
@@ -179,10 +187,10 @@ echo 'PASS #2 - MEDIUM FILE', PHP_EOL, '========================================
 echo 'HTMLPurifier Pass #3 - Big File:', PHP_EOL;
 $timer->start();
 
-$config = HTMLPurifier_Config::createDefault();
-$config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
-$purifier = new HTMLPurifier($config);
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
+    $config = HTMLPurifier_Config::createDefault();
+    $config->set('Cache.SerializerPath', HTMLPURIFIER_CACHE);
+    $purifier = new HTMLPurifier($config);
     $purifier->purify($bigInput);
 }
 
@@ -206,7 +214,11 @@ echo 'htmLawed Pass #3 - Big File:', PHP_EOL;
 $timer->start();
 
 for ($i=0;$i<=BENCHMARK_ITERATIONS;$i++) {
-    htmlawed($bigInput, array('safe'=>1,'deny_attribute'=>'style'));
+    $config = array(
+        'safe' => 1, 'deny_attribute' => '* -name', 'make_tag_strict' => 1,
+        'no_deprecated_attr' => 1, 'elements' => 'em'
+    );
+    htmlawed($bigInput, $config);
 }
 
 $timer->stop();
